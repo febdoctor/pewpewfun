@@ -67,3 +67,11 @@ while rem > 0:
     screen.blit(txt, 0, 0)
     pew.show(screen)
     pew.tick(1 / 4)
+
+txt = pew.Pix.from_text('STOP')
+while True:
+    keys = pew.keys()
+    for i in range(txt.width):
+        screen.blit(txt, -i, 1)
+        pew.show(screen)
+        pew.tick(1 / 12)
