@@ -1,3 +1,8 @@
+""" Talk timer "timingo" PewPewDie application
+
+Finish your talks on time with timingo for PewPewDie device.
+"""
+
 import pew
 
 pew.init()
