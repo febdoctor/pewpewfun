@@ -1,8 +1,6 @@
 # Timingo
 
-Talk timer "timingo" PewPewDie application
-
-Finish your talks on time with timingo for PewPewDie device.
+Finish your talks on time with timingo for PewPew device.
 
 ## Installation
 
@@ -22,4 +20,3 @@ As the timer reaches limits (10, 5, 2 and 1 minute), the displays
 starts become visible (blinking, jumping, screaming ...)
 
 When whole session time elapsed, the device displays STOP.
- 
