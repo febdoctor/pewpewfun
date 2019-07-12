@@ -28,6 +28,10 @@ while True:
         sesstime+=5
     if keys & pew.K_DOWN and sesstime > 5:
         sesstime-=5
+    if keys & pew.K_LEFT:
+        sesstime+=1
+    if keys & pew.K_RIGHT and sesstime > 2:
+        sesstime-=1    
     if keys & pew.K_O:
         break
     txt = pew.Pix.from_text('%02d' % sesstime)
