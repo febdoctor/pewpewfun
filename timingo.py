@@ -22,18 +22,21 @@ sesstime = 45
 screen.blit(background)
 while pew.keys():
     pass
+pressed = 0
 while True:
     keys = pew.keys()
-    if keys & pew.K_UP:
-        sesstime+=5
-    if keys & pew.K_DOWN and sesstime > 5:
-        sesstime-=5
-    if keys & pew.K_LEFT:
-        sesstime+=1
-    if keys & pew.K_RIGHT and sesstime > 2:
-        sesstime-=1    
-    if keys & pew.K_O:
-        break
+    if keys != pressed:
+        if keys & pew.K_UP:
+            sesstime+=5
+        if keys & pew.K_DOWN and sesstime > 5:
+            sesstime-=5
+        if keys & pew.K_LEFT:
+            sesstime+=1
+        if keys & pew.K_RIGHT and sesstime > 2:
+            sesstime-=1
+        if keys & pew.K_O:
+            break
+    pressed = keys
     txt = pew.Pix.from_text('%02d' % sesstime)
     screen.blit(txt, 0, 0)
     pew.show(screen)
