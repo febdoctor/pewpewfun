@@ -1,6 +1,6 @@
-""" Talk timer "timingo" PewPewDie application
+""" Talk timer "timingo" PewPew application
 
-Finish your talks on time with timingo for PewPewDie device.
+Finish your talks on time with timingo for PewPew device.
 """
 
 import pew
