@@ -50,8 +50,15 @@ steps = 8
 ticks = 0
 fg = 3
 limits=[10, 5, 2, 1]
+pressed = 0
 while rem > 0:
     keys = pew.keys()
+    if keys != pressed:
+        if keys & pew.K_UP:
+            rem+=1
+        if keys & pew.K_DOWN and rem > 1:
+            rem-=1
+    pressed = keys
     m = 0
     for i in range(8):
         clr = min(max(0, secs - m), 7) // 2
