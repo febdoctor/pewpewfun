@@ -62,6 +62,7 @@ while rem > 0:
         if keys & pew.K_DOWN and rem > 1:
             rem-=1
     pressed = keys
+    screen.box(0)
     m = 0
     for i in range(8):
         clr = min(max(0, secs - m), 7) // 2
@@ -71,6 +72,9 @@ while rem > 0:
     if ticks == 4:
         secs += 1
         ticks = 0
+    off = 0
+    if rem <= limits[-1]:
+        off = ticks % 2
     if secs >= 60:
         secs = 0
         rem -= 1
@@ -78,7 +82,7 @@ while rem > 0:
         if rem <= lim:
            fg = 3 - ticks % (i+1)
     txt = pew.Pix.from_text('%02d' % rem, color=fg)
-    screen.blit(txt, 0, 0)
+    screen.blit(txt, off, off)
     pew.show(screen)
     pew.tick(1 / 4)
 
